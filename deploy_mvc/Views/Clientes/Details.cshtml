@@ -1,0 +1,57 @@
+﻿@model AppService.ViewModels.ClienteViewModel
+
+@{
+    ViewBag.Title = "Detalhes do Cliente";
+}
+
+<h2> </h2>
+
+<div class="container">
+    <div class="row">
+        <div class="">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">@Model.Nome</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                     
+                        <div class=" col-md-9 col-lg-9 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td>E-mail:</td>
+                                        <td><a href="mailto:@Model.Email">@Model.Email</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data de Nascimento:</td>
+                                        <td>@Model.DataNascimento.ToString("d")</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data de Cadastro</td>
+                                        <td>@Model.DataCadastro.ToString("d")</td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>CPF</td>
+                                        <td>@Model.CPF</td>
+                                    </tr>
+                                
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a href="@Url.Action("Edit", "Clientes", new {id = Model.ClienteId})" data-modal="" class="btn btn-primary">
+                        <span title="Editar" class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="@Url.Action("Delete", "Clientes", new { id = Model.ClienteId })" data-modal="" class="btn btn-danger">
+                        <span title="Excluir" class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

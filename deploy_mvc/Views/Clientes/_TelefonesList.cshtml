@@ -1,0 +1,99 @@
+﻿@model IEnumerable<AppService.ViewModels.TelefoneViewModel>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Telefones do Cliente</strong>
+    </div>
+
+    @if (Model.Any())
+    {
+        <table class="table table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DDD)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumeroTelefone)
+                </th>
+      
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DDD)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumeroTelefone)
+                    </td>
+                   
+                    <td>
+                        <a href="@Url.Action("AtualizarTelefone", "Clientes", new {id = item.TelefoneId})" data-modal="" class="btn btn-default">
+                            <span title="Editar" class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="@Url.Action("DeletarTelefone", "Clientes", new {id = item.TelefoneId})" data-modal="" class="btn btn-danger">
+                            <span title="Excluir" class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <table class="table">
+            <tr>
+                <th>
+                    Nenhum Telefone Cadastrado.
+                </th>
+            </tr>
+        </table>
+    }
+</div>
+    <div>
+        <div class="form-group">
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Novo Telefone", "AdicionarTelefone", "Clientes", new { id = ViewBag.ClienteId }, new { @class = "btn btn-primary", data_modal = "" })
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+
+        $(function () {
+            $.ajaxSetup({ cache: false });
+
+            $("a[data-modal]").on("click", function (e) {
+                $('#myModalContent').load(this.href, function () {
+                    $('#myModal').modal({
+                        /*backdrop: 'static',*/
+                        keyboard: true
+                    }, 'show');
+                    bindForm(this);
+                });
+                return false;
+            });
+        });
+
+        function bindForm(dialog) {
+            $('form', dialog).submit(function () {
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        if (result.success) {
+                            $('#myModal').modal('hide');
+                            $('#replacetarget2').load(result.url); // Carrega o resultado HTML para a div demarcada
+                        } else {
+                            $('#myModalContent').html(result);
+                            bindForm(dialog);
+                        }
+                    }
+                });
+                return false;
+            });
+        }
+    </script>
