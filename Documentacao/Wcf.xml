@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2d5b312b-964e-4711-aab7-623296dfd891" activeEnvironment="Default" name="ClienteService" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="7cac9f28-dedf-44c9-bc73-b8475d1f2623" wsaVersion="NONE" name="BasicHttpBinding_IClienteService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IClienteService" soapVersion="1_1" anonymous="optional" definition="http://localhost:53969/ClienteService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:53969/ClienteService.svc?wsdl"><con:part><con:url>http://localhost:53969/ClienteService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ClienteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AppService.ViewModels"/>
+      <xsd:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd3" namespace="www.verity.com.br"/>
+      <xsd:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IClienteService_ListarTodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodos"/>
+  </wsdl:message>
+  <wsdl:message name="IClienteService_ListarTodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IClienteService_Criar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Criar"/>
+  </wsdl:message>
+  <wsdl:message name="IClienteService_Criar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CriarResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IClienteService">
+    <wsdl:operation name="ListarTodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteService/ListarTodos" message="tns:IClienteService_ListarTodos_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteService/ListarTodosResponse" message="tns:IClienteService_ListarTodos_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Criar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteService/Criar" message="tns:IClienteService_Criar_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteService/CriarResponse" message="tns:IClienteService_Criar_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IClienteService" type="tns:IClienteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ListarTodos">
+      <soap:operation soapAction="http://tempuri.org/IClienteService/ListarTodos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Criar">
+      <soap:operation soapAction="http://tempuri.org/IClienteService/Criar" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClienteService">
+    <wsdl:port name="BasicHttpBinding_IClienteService" binding="tns:BasicHttpBinding_IClienteService">
+      <soap:address location="http://localhost:53969/ClienteService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:53969/ClienteService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AppService.ViewModels"/>
+  <xs:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd3" namespace="www.verity.com.br"/>
+  <xs:element name="ListarTodos">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarTodosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListarTodosResult" nillable="true" type="q1:ArrayOfClienteViewModel" xmlns:q1="http://schemas.datacontract.org/2004/07/AppService.ViewModels"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Criar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clienteTelefoneEnderecoViewModel" nillable="true" type="q2:Cliente" xmlns:q2="www.verity.com.br"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CriarResult" nillable="true" type="q3:Cliente" xmlns:q3="www.verity.com.br"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:53969/ClienteService.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AppService.ViewModels" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/AppService.ViewModels">
+  <xs:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="ArrayOfClienteViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClienteViewModel" nillable="true" type="tns:ClienteViewModel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClienteViewModel" nillable="true" type="tns:ArrayOfClienteViewModel"/>
+  <xs:complexType name="ClienteViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CPF" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ClienteId" type="ser:guid"/>
+      <xs:element minOccurs="0" name="DataCadastro" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataNascimento" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Enderecos" nillable="true" type="tns:ArrayOfEnderecoViewModel"/>
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Telefones" nillable="true" type="tns:ArrayOfTelefoneViewModel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClienteViewModel" nillable="true" type="tns:ClienteViewModel"/>
+  <xs:complexType name="ArrayOfEnderecoViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EnderecoViewModel" nillable="true" type="tns:EnderecoViewModel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEnderecoViewModel" nillable="true" type="tns:ArrayOfEnderecoViewModel"/>
+  <xs:complexType name="EnderecoViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bairro" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CEP" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Cidade" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ClienteId" type="ser:guid"/>
+      <xs:element minOccurs="0" name="Complemento" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="EnderecoId" type="ser:guid"/>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Logradouro" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnderecoViewModel" nillable="true" type="tns:EnderecoViewModel"/>
+  <xs:complexType name="ArrayOfTelefoneViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TelefoneViewModel" nillable="true" type="tns:TelefoneViewModel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTelefoneViewModel" nillable="true" type="tns:ArrayOfTelefoneViewModel"/>
+  <xs:complexType name="TelefoneViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClienteId" type="ser:guid"/>
+      <xs:element minOccurs="0" name="DDD" type="xs:int"/>
+      <xs:element minOccurs="0" name="NumeroTelefone" type="xs:int"/>
+      <xs:element minOccurs="0" name="TelefoneId" type="ser:guid"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TelefoneViewModel" nillable="true" type="tns:TelefoneViewModel"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:53969/ClienteService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:53969/ClienteService.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="www.verity.com.br" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="www.verity.com.br">
+  <xs:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://localhost:53969/ClienteService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+  <xs:complexType name="Cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bairro" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CEP" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CPF" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Cidade" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ClienteId" type="ser:guid"/>
+      <xs:element minOccurs="0" name="Complemento" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DDD" type="xs:int"/>
+      <xs:element minOccurs="0" name="DataCadastro" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="EnderecoId" type="ser:guid"/>
+      <xs:element minOccurs="0" name="Erros" nillable="true" type="q1:ArrayOfstring" xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Logradouro" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NumeroTelefone" type="xs:int"/>
+      <xs:element minOccurs="0" name="TelefoneId" type="ser:guid"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cliente" nillable="true" type="tns:Cliente"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:53969/ClienteService.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+  <xs:complexType name="ArrayOfstring">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:53969/ClienteService.svc</con:endpoint></con:endpoints><con:operation id="87f0931b-1f62-4673-bc78-7976f0b47503" isOneWay="false" action="http://tempuri.org/IClienteService/ListarTodos" name="ListarTodos" bindingOperationName="ListarTodos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2ead8ea4-5bd5-4c71-85da-2a32365818d5" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:53969/ClienteService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ListarTodos/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IClienteService/ListarTodos"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="40f81d60-c4ce-4436-b435-ea3acbb70b5a" isOneWay="false" action="http://tempuri.org/IClienteService/Criar" name="Criar" bindingOperationName="Criar" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="916c15da-c54e-4f00-ab20-0bea27ed14e0" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:53969/ClienteService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ver="www.verity.com.br" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:Criar>\r
+         <!--Optional:-->\r
+         <tem:clienteTelefoneEnderecoViewModel>\r
+            <!--Optional:-->\r
+            <ver:Bairro>vila</ver:Bairro>\r
+            <!--Optional:-->\r
+            <ver:CEP>03203030</ver:CEP>\r
+            <!--Optional:-->\r
+            <ver:CPF>26267286673</ver:CPF>\r
+            <!--Optional:-->\r
+            <ver:Cidade>sap paulo</ver:Cidade>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ver:Complemento>xa</ver:Complemento>\r
+            <!--Optional:-->\r
+            <ver:DDD>11</ver:DDD>\r
+            <!--Optional:-->\r
+            <ver:Email>wan@gmail.com</ver:Email>\r
+            <!--Optional:-->\r
+            <ver:Estado>sp</ver:Estado>\r
+            <!--Optional:-->\r
+            <ver:Logradouro>shauhsa</ver:Logradouro>\r
+            <!--Optional:-->\r
+            <ver:Nome>wans</ver:Nome>\r
+            <!--Optional:-->\r
+            <ver:Numero>98</ver:Numero>\r
+            <!--Optional:-->\r
+            <ver:NumeroTelefone>1111</ver:NumeroTelefone>\r
+         </tem:clienteTelefoneEnderecoViewModel>\r
+      </tem:Criar>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IClienteService/Criar"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
