@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AppService.ViewModels.ClienteViewModel>
+
+@{
+    ViewBag.Title = "Lista de Clientes";
+}
+<div>
+    <h2></h2>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>@ViewBag.Title</strong>
+    </div>
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CPF)
+                </td>
+            
+                <td>
+                    <a href="@Url.Action("Edit", "Clientes", new {id = item.ClienteId})" class="btn btn-default"><span title="Editar" class="glyphicon glyphicon-pencil"></span></a>
+                    <a href="@Url.Action("Details", "Clientes", new {id = item.ClienteId})" class="btn btn-default"><span title="Detalhes" class="glyphicon glyphicon-search"></span></a>
+
+                        <a href="@Url.Action("Delete", "Clientes", new {id = item.ClienteId})" class="btn btn-danger"><span title="Excluir" class="glyphicon glyphicon-trash"></span></a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<div>
+    <div class="form-group">
+        @Html.ActionLink("Novo Cliente", "Create", "Clientes", null, new {@class = "btn btn-primary"})
+    </div>
+</div>

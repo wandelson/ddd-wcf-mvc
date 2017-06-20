@@ -1,0 +1,11 @@
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\obj\Debug\Domain.Tests.csprojResolveAssemblyReference.cache
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\bin\Debug\Domain.Tests.dll
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\bin\Debug\Domain.Tests.pdb
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\bin\Debug\Domain.dll
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\bin\Debug\DomainValidation.dll
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\bin\Debug\Rhino.Mocks.dll
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\bin\Debug\Domain.pdb
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\bin\Debug\Rhino.Mocks.xml
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\obj\Debug\Domain.Tests.dll
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain.Tests\obj\Debug\Domain.Tests.pdb

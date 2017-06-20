@@ -1,0 +1,127 @@
+﻿@model IEnumerable<AppService.ViewModels.EnderecoViewModel>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Endereços do Cliente</strong>
+    </div>
+
+    @if (Model.Any())
+    {
+        <table class="table table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Logradouro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Complemento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bairro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CEP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cidade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Logradouro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Numero)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Complemento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bairro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CEP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estado)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("AtualizarEndereco", "Clientes", new {id = item.EnderecoId})" data-modal="" class="btn btn-default">
+                            <span title="Editar" class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="@Url.Action("DeletarEndereco", "Clientes", new {id = item.EnderecoId})" data-modal="" class="btn btn-danger">
+                            <span title="Excluir" class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <table class="table">
+            <tr>
+                <th>
+                    Nenhum Endereço Cadastrado.
+                </th>
+            </tr>
+        </table>
+    }
+</div>
+    <div>
+        <div class="form-group">
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Novo Endereço", "AdicionarEndereco", "Clientes", new { id = ViewBag.ClienteId }, new { @class = "btn btn-primary", data_modal = "" })
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+
+        $(function () {
+            $.ajaxSetup({ cache: false });
+
+            $("a[data-modal]").on("click", function (e) {
+                $('#myModalContent').load(this.href, function () {
+                    $('#myModal').modal({
+                        /*backdrop: 'static',*/
+                        keyboard: true
+                    }, 'show');
+                    bindForm(this);
+                });
+                return false;
+            });
+        });
+
+        function bindForm(dialog) {
+            $('form', dialog).submit(function () {
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        if (result.success) {
+                            $('#myModal').modal('hide');
+                            $('#replacetarget').load(result.url); // Carrega o resultado HTML para a div demarcada
+                        } else {
+                            $('#myModalContent').html(result);
+                            bindForm(dialog);
+                        }
+                    }
+                });
+                return false;
+            });
+        }
+    </script>

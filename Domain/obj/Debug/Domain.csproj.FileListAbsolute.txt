@@ -1,0 +1,6 @@
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain\bin\Debug\Domain.dll
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain\bin\Debug\Domain.pdb
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain\bin\Debug\DomainValidation.dll
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain\obj\Debug\Domain.dll
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain\obj\Debug\Domain.pdb
+C:\Users\wans\Downloads\CrudDDDModal (1)\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
