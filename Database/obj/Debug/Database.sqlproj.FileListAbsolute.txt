@@ -1,9 +1,0 @@
-C:\Users\wans\Downloads\CrudDDDModal (1)\Database\bin\Debug\Database.dacpac
-C:\Users\wans\Downloads\CrudDDDModal (1)\Database\bin\Debug\Database.dll
-C:\Users\wans\Downloads\CrudDDDModal (1)\Database\bin\Debug\Database.pdb
-C:\Users\wans\Downloads\CrudDDDModal (1)\Database\obj\Debug\Database.dll
-C:\Users\wans\Downloads\CrudDDDModal (1)\Database\obj\Debug\Database.pdb
-C:\Users\wans\Downloads\CrudDDDModal (1)\Database\obj\Debug\Model.xml
-C:\Users\wans\Downloads\CrudDDDModal (1)\Database\obj\Debug\refactor.xml
-C:\Users\wans\Downloads\CrudDDDModal (1)\Database\obj\Debug\postdeploy.sql
-C:\Users\wans\Downloads\CrudDDDModal (1)\Database\obj\Debug\predeploy.sql
